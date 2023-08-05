@@ -1,0 +1,3 @@
+displayName = Implements of Extinction
+author = POWRFULCOW89
+version = 0.1
