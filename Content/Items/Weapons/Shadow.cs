@@ -1,14 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Net;
-using Terraria.UI;
-using Terraria.Server;
-using Terraria.Chat;
-using Terraria.Localization;
-using Terraria.UI.Chat;
 
 namespace IOE.Content.Items.Weapons
 {
@@ -47,16 +40,6 @@ namespace IOE.Content.Items.Weapons
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }
-
-        private void Dash(Player player, float velocityX)
-        {
-            player.velocity.X = velocityX;
-            player.velocity.Y = -8f;
-            player.immune = true;
-            player.immuneTime = 30;
-            // Additional dash effects or logic
-        }
-
     }
 
     public class DashPlayer : ModPlayer
@@ -115,7 +98,7 @@ namespace IOE.Content.Items.Weapons
         // If they double tapped this frame, they'll move fast this frame
         public override void PreUpdateMovement()
         {
-            if(CanUseDash())
+            if (CanUseDash())
             {
                 Vector2 newVelocity = Player.velocity;
 

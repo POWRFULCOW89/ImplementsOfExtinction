@@ -5,4 +5,11 @@ Items: {
 		DisplayName: Shadow
 		Tooltip: ""
 	}
+
+	Yazata: {
+		DisplayName: Yazata
+		Tooltip: ""
+	}
 }
+
+Projectiles.YazataProjectile.DisplayName: Yazata Projectile
